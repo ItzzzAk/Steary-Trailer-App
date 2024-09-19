@@ -29,11 +29,11 @@ const LeftSide = () => {
 
   return (
     <div className="w-[25%] h-full p-5 flex gap-5 flex-col">
-      <div className="w-full h-[60%] bg-[#939391b9] rounded-3xl overflow-hidden p-5">
+      <div className="w-full h-[60%] bg-[#787776ab] rounded-3xl overflow-hidden p-5">
         {/* Header */}
         <div className="w-full flex justify-between">
           <span className="text-md">🔥 New Trailer</span>
-          <span className="flex text-sm font-bold text-[#5e5e5e] items-center">
+          <span className="flex text-sm font-bold text-[#000000] items-center">
             Sort by:
             <p className="flex text-xs text-white items-center">Today</p>
           </span>
@@ -42,7 +42,7 @@ const LeftSide = () => {
         {/* Movie Cards */}
         <div className="p-2 flex flex-col gap-2 w-full">
           <MovieCard
-            image="https://i.pinimg.com/736x/88/8e/81/888e81d78e72ad08a24994f9ad48bd94.jpg"
+            image="https://i.pinimg.com/564x/8a/2d/89/8a2d892887fdf0746d85635cd318f9fc.jpg"
             title="The Last Kingdom: Seven Kings Must Die"
           />
           <MovieCard
@@ -56,7 +56,7 @@ const LeftSide = () => {
         </div>
       </div>
 
-      <div className="w-full h-[40%] bg-[#939391b9] rounded-3xl px-5 py-2">
+      <div className="w-full h-[40%] bg-[#787776ab] rounded-3xl px-5 py-2">
         <h5>Continue Watching</h5>
         <div className="w-full px-3 py-4 " >
           {items.map((item) => (
@@ -73,7 +73,7 @@ const LeftSide = () => {
               </div>
               <div className="">
                 <p>{item.title}</p>
-                <p className="text-[#383838]">{item.description}</p>
+                <p className="text-[#000000]">{item.description}</p>
               </div>
               <div className="w-6 h-6 bg-[#808688] rounded-full flex items-center justify-center cursor-pointer">
                 <FaPlay className="text-[.5vw]" />

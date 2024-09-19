@@ -1,8 +1,40 @@
 import { useState, useRef } from "react";
-import { BsThreeDots } from "react-icons/bs";
 import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Cards from "./Cards";
+
+
+const cardsData = [
+  {
+    title: 'The Flash (2023)',
+    genre: 'Fantasy',
+    description: 'The movie follows Barry Allen, aka The Flash, played by Ezra Miller, as he uses his super-speed abilities to travel back in time and alter events from his past in an attempt to save his mother from being murdered.',
+    imageUrl: 'https://i.pinimg.com/564x/fe/42/4a/fe424abeb6ae298fe54698acde79e453.jpg'
+  },
+  {
+    title: 'Manifest',
+    genre: 'Mistery',
+    description: 'Manifest is a captivating supernatural drama series that follows the lives of the passengers of Flight 828, who experience a turbulent flight and arrive five and a half years later to discover that the world has moved on without them.',
+    imageUrl: 'https://i.pinimg.com/564x/17/47/7c/17477c872e2a3a6fed37c2683c403c46.jpg'
+  },
+  {
+    title: 'Lucifer',
+    genre: 'Dark',
+    description: 'Lucifer is an enthralling urban fantasy series that follows Lucifer Morningstar, the Devil, who becomes disillusioned with his role in Hell and decides to retire to Los Angeles.',
+    imageUrl: 'https://i.pinimg.com/564x/cc/34/73/cc347347a270607cfaffc41bd2fd3ce2.jpg'
+  },
+  {
+    title: 'Interstellar',
+    genre: 'Thriller',
+    description: 'Interstellar is a groundbreaking science fiction film directed by Christopher Nolan that explores the boundless possibilities of space travel and the survival of humanity.',
+    imageUrl: 'https://i.pinimg.com/564x/01/01/c6/0101c6179012640f9fd8ecad12ebc33b.jpg'
+  },
+
+];
+
+
+
 
 const videoData = [
   {
@@ -213,26 +245,8 @@ const RightSide = () => {
             See all
           </span>
         </div>
-        <div className="w-full h-[90%] ">
-          <div className="w-[20%] h-[94%] rounded-3xl bg-red-600">
-            <div>
-              <span>
-                <BsThreeDots />
-              </span>
-            </div>
-            <div>
-              <span>Fantansy</span>
-            </div>
-            <div>
-              <span>title</span>
-              <p>descr</p>
-              <div>
-                <div>
-                  <FaPlay />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="w-full h-[90%] p-2 ">
+          <Cards cardsData={cardsData} />
         </div>
       </div>
     </div>
