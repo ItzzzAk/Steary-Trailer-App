@@ -1,6 +1,6 @@
 # 🌟 Steary Trailer Website 🎬
 
-![Steary Trailer Website](/Public/Steary.png)
+![Steary Trailer Website](/Steary.png)
 
 ## 📜 Overview
 
