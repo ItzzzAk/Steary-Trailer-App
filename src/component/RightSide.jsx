@@ -7,7 +7,7 @@ import Cards from "./Cards";
 
 const cardsData = [
   {
-    title: 'The Flash (2023)',
+    title: 'The Flash',
     genre: 'Fantasy',
     description: 'The movie follows Barry Allen, aka The Flash, played by Ezra Miller, as he uses his super-speed abilities to travel back in time and alter events from his past in an attempt to save his mother from being murdered.',
     imageUrl: 'https://i.pinimg.com/564x/fe/42/4a/fe424abeb6ae298fe54698acde79e453.jpg'
@@ -136,7 +136,7 @@ const RightSide = () => {
   };
 
   return (
-    <div className="w-[75%] h-full p-5">
+    <div className="w-[75%] h-full p-5 below-1366:p-2">
       <div className="w-full h-[60%] relative">
         <div className="w-full h-full rounded-3xl overflow-hidden">
           {/* Video element */}
@@ -149,19 +149,19 @@ const RightSide = () => {
           />
         </div>
 
-        <div className="absolute top-0 w-full h-full rounded-3xl p-5 bg-black bg-opacity-50">
+        <div className="absolute top-0 w-full h-full rounded-3xl p-5 below-1366:p-3 bg-black bg-opacity-50">
           <div className="w-full">
-            <span className="bg-[#393957] rounded-full p-2 text-[.8em]">
+            <span className="bg-[#393957] rounded-full p-2 below-1366:px-[.5em] below-1366:py-[.5em] text-[.8vw]                                                                                                      ]">
               🔥Now Trending
             </span>
           </div>
 
-          <div className="w-full h-[40%] mt-36">
-            <div className={`w-full mb-5 ${isPlaying ? "hidden" : "block"}`}>
+          <div className="w-full h-[40%] mt-36 below-1366:mt-[5em]">
+            <div className={`w-full mb-5 below-1366:mb-[.8em] ${isPlaying ? "hidden" : "block"}`}>
               {activeVideo.genre.map((g, index) => (
                 <span
                   key={index}
-                  className="bg-[#393957] rounded-full p-2 text-[.8em] mr-5"
+                  className="bg-[#393957] rounded-full p-2 below-1366:px-[.8em] below-1366:py-[.5em] text-[.8vw] mr-5"
                 >
                   {g}
                 </span>
@@ -169,14 +169,14 @@ const RightSide = () => {
             </div>
             <div>
               <h1
-                className={`text-white text-[1.5vw] font-semibold ${
+                className={`text-white text-[1.5vw]  font-semibold ${
                   isPlaying ? "hidden" : "block"
                 }`}
               >
                 {activeVideo.title}
               </h1>
               <p
-                className={`w-[70%] text-[#a0a0a0] ${
+                className={`w-[70%] text-[#a0a0a0] below-1366:text-[.7em] ${
                   isPlaying ? "hidden" : "block"
                 }`}
               >
@@ -189,7 +189,7 @@ const RightSide = () => {
             <div className="flex gap-5">
               <button
                 onClick={hasEnded ? replayVideo : togglePlayPause}
-                className={`flex items-center gap-2 py-3 px-7 rounded-full transition-all duration-300 ${
+                className={`flex items-center gap-2 py-3 px-7 below-1366:w-[10vw] below-1366:text-[1.2vw]  below-1366:h-[6vh] rounded-full transition-all duration-300 ${
                   isPlaying || hasEnded
                     ? "bg-white text-black"
                     : "bg-transparent border-2 border-white text-white"
@@ -197,26 +197,26 @@ const RightSide = () => {
               >
                 {hasEnded ? (
                   <>
-                    <FaRedo />
+                    <FaRedo  className="below-1366:text-[1vw]" />
                     Replay
                   </>
                 ) : isPlaying ? (
                   <>
-                    <FaPause />
+                    <FaPause className="below-1366:text-[1vw]"  />
                     Pause
                   </>
                 ) : (
                   <>
-                    <FaPlay />
+                    <FaPlay className="below-1366:text-[1vw]"  />
                     Watch
                   </>
                 )}
               </button>
               <button
                 onClick={downloadVideo}
-                className="flex items-center gap-2 py-3 px-7 border-2 border-white rounded-full transition-all duration-300 bg-white text-black hover:bg-black hover:text-white"
+                className="flex items-center justify-center gap-2 py-3 px-7 border-2  below-1366:w-[12vw] below-1366:text-[1.2vw]  below-1366:h-[6vh]  border-white rounded-full transition-all duration-300 bg-white text-black hover:bg-black hover:text-white"
               >
-                <FiDownload />
+                <FiDownload className="below-1366:text-[1vw]" />
                 Download
               </button>
             </div>

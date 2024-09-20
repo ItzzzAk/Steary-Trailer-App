@@ -28,19 +28,19 @@ const LeftSide = () => {
   ];
 
   return (
-    <div className="w-[25%] h-full p-5 flex gap-5 flex-col">
+    <div className="w-[25%] h-full p-5 flex gap-5 flex-col below-1366:p-[.7em]">
       <div className="w-full h-[60%] bg-[#787776ab] rounded-3xl overflow-hidden p-5">
         {/* Header */}
-        <div className="w-full flex justify-between">
-          <span className="text-md">🔥 New Trailer</span>
-          <span className="flex text-sm font-bold text-[#000000] items-center">
+        <div className="w-full flex justify-between below-1366">
+          <span className="text-[1vw]">🔥 New Trailer</span>
+          <span className="flex text-[.8vw] font-bold text-[#000000] items-center">
             Sort by:
-            <p className="flex text-xs text-white items-center">Today</p>
+            <p className="flex text-[.9vw] text-white items-center">Today</p>
           </span>
         </div>
 
         {/* Movie Cards */}
-        <div className="p-2 flex flex-col gap-2 w-full">
+        <div className="p-2 below-1366:p-1 flex flex-col gap-2 w-full below-1366:gap-2">
           <MovieCard
             image="https://i.pinimg.com/564x/8a/2d/89/8a2d892887fdf0746d85635cd318f9fc.jpg"
             title="The Last Kingdom: Seven Kings Must Die"
@@ -56,15 +56,15 @@ const LeftSide = () => {
         </div>
       </div>
 
-      <div className="w-full h-[40%] bg-[#787776ab] rounded-3xl px-5 py-2">
-        <h5>Continue Watching</h5>
-        <div className="w-full px-3 py-4 " >
+      <div className="w-full h-[40%] bg-[#787776ab] rounded-3xl px-5 py-2 below-1366:px-[1em]">
+        <h5 className="below-1366:text-[1.1vw]  below-1366:mb-1">Continue Watching</h5>
+        <div className="w-full px-3 py-4  below-1366:px-[0em] below-1366:py-[0em]" >
           {items.map((item) => (
             <div
               key={item.id}
-              className="w-full flex justify-between items-center mb-6"
+              className="w-full flex justify-between items-center mb-6 below-1366:mb-1"
             >
-              <div className="w-12 h-12 overflow-hidden rounded-md">
+              <div className="w-[3vw] h-[6vh] overflow-hidden rounded-md">
                 <img
                   className="w-full h-full object-cover"
                   src={item.imgSrc}
@@ -72,8 +72,8 @@ const LeftSide = () => {
                 />
               </div>
               <div className="">
-                <p>{item.title}</p>
-                <p className="text-[#000000]">{item.description}</p>
+                <p className="text-[1vw]">{item.title}</p>
+                <p className="text-[#000000] text-[1vw]">{item.description}</p>
               </div>
               <div className="w-6 h-6 bg-[#808688] rounded-full flex items-center justify-center cursor-pointer">
                 <FaPlay className="text-[.5vw]" />

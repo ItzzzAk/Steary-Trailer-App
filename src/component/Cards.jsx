@@ -8,7 +8,7 @@ import { FaPlay } from 'react-icons/fa';
 const Card = ({ title, genre, description, imageUrl }) => {
   return (
     <div
-      className="relative w-[20%] mr-5 h-[94%] bg-cover bg-center rounded-3xl p-2"
+      className="relative w-[20%] mr-5 h-[94%] below-1366:h-[22vh] bg-cover bg-center rounded-3xl p-2"
       style={{ backgroundImage: `url(${imageUrl})` }}
     >
       {/* Dark overlay to make the text stand out */}
@@ -17,26 +17,26 @@ const Card = ({ title, genre, description, imageUrl }) => {
       {/* Content on top of the dark overlay */}
       <div className="relative z-10 flex flex-col h-full">
         <div className="w-full flex justify-end">
-          <span className="p-2 backdrop-blur-md bg-white bg-opacity-30 rounded-full flex items-center">
+          <span className="p-2 below-1366:p-[.2em] below-1366:text-[1vw] backdrop-blur-md bg-white bg-opacity-30 rounded-full flex items-center">
             <BsThreeDots />
           </span>
         </div>
 
-        <div className="w-full mt-20">
-          <span className="px-2 py-1 backdrop-blur-md bg-white bg-opacity-30 rounded-full text-[.7vw]">
+        <div className="w-full mt-20 below-1366:mt-2">
+          <span className="px-2 py-1 below-1366:py-[.3em] backdrop-blur-md bg-white bg-opacity-30 rounded-full text-[.7vw]">
             {genre}
           </span>
         </div>
 
         <div className="flex w-full justify-between mt-3 items-center">
           <div className="w-[90%]">
-            <span>{title}</span>
-            <p className="w-[80%] text-[.7vw] text-gray-300 line-clamp-2 overflow-hidden">
+            <span className='below-1366:text-[.9vw]'>{title}</span>
+            <p className="w-[80%] text-[.7vw] below-1366:text-[.7vw] text-gray-300 line-clamp-2 overflow-hidden">
               {description}
             </p>
           </div>
           <div>
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black">
+            <div className="w-12 h-12 below-1366:w-[3vw] below-1366:h-[6vh] flex items-center justify-center rounded-full bg-white text-black">
               <FaPlay />
             </div>
           </div>
